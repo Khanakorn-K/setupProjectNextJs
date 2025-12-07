@@ -10,7 +10,6 @@ import {
   SidebarTrigger,
   SidebarInset,
 } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/app-sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,20 +34,13 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <SidebarProvider>
-              <AppSidebar />
+              <header className="flex items-center gap-2 px-4 py-2 border-b"></header>
 
-              <SidebarInset>
-                <header className="flex items-center gap-2 px-4 py-2 border-b">
-                  <SidebarTrigger />
-                  <Navbar />
-                </header>
+              <main className="flex-1 container mx-auto px-4 py-8">
+                {children}
+              </main>
 
-                <main className="flex-1 container mx-auto px-4 py-8">
-                  {children}
-                </main>
-
-                <Footer />
-              </SidebarInset>
+              <Footer />
             </SidebarProvider>
           </ThemeProvider>
         </Providers>
