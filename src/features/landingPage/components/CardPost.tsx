@@ -89,7 +89,7 @@ const CardPost = ({
             />
             <h2>ผู้เขียน : {authorName}</h2>
             <Link
-              className="bg-red-600 p-2 rounded-full"
+              className="bg-destructive h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5 items-center flex text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60"
               href={`createPost?postId=${id}`}
             >
               <p>แก้ไข้</p>
